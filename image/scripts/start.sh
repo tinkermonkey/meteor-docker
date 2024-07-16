@@ -30,5 +30,5 @@ else
 fi
 
 export PORT=${PORT:-3000}
-echo "=> Starting meteor app on port $PORT"
-node main.js
+echo "=> Starting meteor app on port $PORT with SERVER_NODE_OPTIONS: $SERVER_NODE_OPTIONS"
+node $SERVER_NODE_OPTIONS main.js

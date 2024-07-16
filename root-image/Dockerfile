@@ -17,4 +17,5 @@ ONBUILD ARG EXACT_NODE_VERSION=false
 ONBUILD RUN bash ./scripts/onbuild-node.sh
 ONBUILD ENV NODE_PATH=/home/app/.onbuild-node/lib/node_modules
 ONBUILD ENV PATH=/home/app/.onbuild-node/bin:$PATH
+ENV SERVER_NODE_OPTIONS=--no-wasm-code-gc
 ENTRYPOINT  bash /home/app/scripts/start.sh
